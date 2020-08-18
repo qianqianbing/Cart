@@ -40,15 +40,17 @@ public class HttpUtils {
         }
         return utils;
     }
-    public boolean isNetwork(Context context){
+
+    public boolean isNetwork(Context context) {
         manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         info = manager.getActiveNetworkInfo();
-        if (info !=null){
+        if (info != null) {
             return info.isConnected();
         }
         return false;
     }
-    public <T> T getService(Class<T> tClass){
+
+    public <T> T getService(Class<T> tClass) {
         return mRetrfit.create(tClass);
     }
 }

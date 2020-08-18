@@ -3,12 +3,7 @@ package com.king.myapplication.data.util;
 import com.king.myapplication.data.Bean.ShowBean;
 
 import io.reactivex.Observable;
-import okhttp3.ResponseBody;
-import retrofit2.http.Field;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
@@ -16,8 +11,8 @@ import retrofit2.http.Query;
  * on 2020/8/18
  * 13:15
  */
-interface ApiService {
-//    @FormUrlEncoded
+public interface ApiService {
+    //    @FormUrlEncoded
 //    @POST("movieApi/user/v2/login")
 //    Observable<LoginBean> obtainLogin(@Field("email") String email, @Field("pwd") String pwd);
 //

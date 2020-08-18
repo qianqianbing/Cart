@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp_5"
+    android:layout_height="@dimen/dp_120">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1c2243"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/white"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_below="@id/tv_text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_11"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_below="@id/tv_text2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/yuyue"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_75"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/tv_text3"
+            android:background="#e8185e"
+            android:text="订阅"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/jjsy_imager"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="@dimen/dp_88"
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/dp_110" />
+
+</RelativeLayout>

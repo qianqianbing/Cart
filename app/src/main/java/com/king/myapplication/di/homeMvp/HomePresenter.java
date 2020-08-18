@@ -15,13 +15,14 @@ public class HomePresenter<V extends HomeContract.IHomeView> extends BasePresent
     public HomePresenter() {
         homeModel = new HomeModel();
     }
-    public void requestHomeData(String page,String count){
-       homeModel.RequestHomeData(page, count, new HomeContract.IHomeModel.HomeBack() {
-           @Override
-           public void getHomeData(ShowBean showBean) {
 
-           }
-       });
+    public void requestHomeData(String page, String count) {
+        homeModel.RequestHomeData(page, count, new HomeContract.IHomeModel.HomeBack() {
+            @Override
+            public void getHomeData(ShowBean showBean) {
+                getView().ShowhomeData(showBean);
+            }
+        });
 
     }
 }

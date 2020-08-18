@@ -15,7 +15,7 @@ import butterknife.Unbinder;
  *@Package_name:com.bw.movie.ui.base
  *@Description:
  * */
-public abstract class BaseActivity<V,P extends BasePresenter<V>> extends AppCompatActivity {
+public abstract class BaseActivity<V, P extends BasePresenter<V>> extends AppCompatActivity {
     public P mPresenter;
     private Unbinder bind;
 
@@ -24,7 +24,7 @@ public abstract class BaseActivity<V,P extends BasePresenter<V>> extends AppComp
         super.onCreate(savedInstanceState);
         setContentView(getLayout());
         bind = ButterKnife.bind(this);
-        mPresenter=oncreatePresenter();
+        mPresenter = oncreatePresenter();
         mPresenter.onAttech((V) this);
         initData();
     }

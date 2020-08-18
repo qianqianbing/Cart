@@ -56,4 +56,8 @@ dependencies {
     implementation 'com.github.xiaohaibin:XBanner:1.6.4'
     //Gson
     implementation 'com.google.code.gson:gson:2.8.5'
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //快速适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }

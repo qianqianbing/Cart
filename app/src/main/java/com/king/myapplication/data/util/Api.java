@@ -6,5 +6,5 @@ package com.king.myapplication.data.util;
  * 13:15
  */
 public class Api {
-    public static final String BaseUrl="http://mobile.bwstudent.com/";
+    public static final String BaseUrl = "http://mobile.bwstudent.com/";
 }

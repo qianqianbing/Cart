@@ -19,7 +19,7 @@ import butterknife.Unbinder;
  *@Package_name:com.bw.movie.ui.base
  *@Description:
  * */
-public abstract class BaseFragment<V,P extends BasePresenter<V>> extends Fragment {
+public abstract class BaseFragment<V, P extends BasePresenter<V>> extends Fragment {
     public P fPresenter;
     private View inflate;
     private Unbinder bind;
@@ -35,7 +35,7 @@ public abstract class BaseFragment<V,P extends BasePresenter<V>> extends Fragmen
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        fPresenter=oncreatePresenter();
+        fPresenter = oncreatePresenter();
         fPresenter.onAttech((V) this);
         initData();
     }

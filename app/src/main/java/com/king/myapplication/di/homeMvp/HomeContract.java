@@ -5,7 +5,7 @@ package com.king.myapplication.di.homeMvp;
  * on 2020/8/18
  * 13:28
  */
-interface HomeContract {
+public interface HomeContract {
     public interface IHomeView{
         public void ShowhomeData();
     }

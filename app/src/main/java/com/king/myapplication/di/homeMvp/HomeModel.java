@@ -6,8 +6,9 @@ package com.king.myapplication.di.homeMvp;
  * 14:32
  */
 public class HomeModel implements HomeContract.IHomeModel {
+
     @Override
-    public void RequestHomeData(HomeBack homeBack) {
+    public void RequestHomeData(String page, String count, HomeBack homeBack) {
 
     }
 }

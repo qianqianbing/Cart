@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.webkit.WebView;
 
 import com.king.myapplication.R;
+import com.king.myapplication.data.Bean.ShowBean;
 import com.king.myapplication.di.homeMvp.HomeContract;
 import com.king.myapplication.di.homeMvp.HomePresenter;
 import com.king.myapplication.ui.base.BaseActivity;
@@ -14,7 +15,7 @@ public class HomeActivity extends BaseActivity<HomeContract.IHomeView, HomePrese
 
     @Override
     protected void initData() {
-        mPresenter.requestHomeData();
+        mPresenter.requestHomeData("1","5");
     }
 
     @Override
@@ -27,8 +28,9 @@ public class HomeActivity extends BaseActivity<HomeContract.IHomeView, HomePrese
         return R.layout.activity_main;
     }
 
+
     @Override
-    public void ShowhomeData() {
+    public void ShowhomeData(ShowBean showBean) {
 
     }
 }

@@ -1,5 +1,6 @@
 package com.king.myapplication.di.homeMvp;
 
+import com.king.myapplication.data.Bean.ShowBean;
 import com.king.myapplication.ui.base.BasePresenter;
 
 /**
@@ -14,13 +15,13 @@ public class HomePresenter<V extends HomeContract.IHomeView> extends BasePresent
     public HomePresenter() {
         homeModel = new HomeModel();
     }
-    public void requestHomeData(){
-        homeModel.RequestHomeData(new HomeContract.IHomeModel.HomeBack() {
-            @Override
-            public void getHomeData() {
-                getView().ShowhomeData();
-            }
-        });
+    public void requestHomeData(String page,String count){
+       homeModel.RequestHomeData(page, count, new HomeContract.IHomeModel.HomeBack() {
+           @Override
+           public void getHomeData(ShowBean showBean) {
+
+           }
+       });
 
     }
 }

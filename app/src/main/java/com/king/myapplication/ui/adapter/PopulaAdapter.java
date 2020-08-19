@@ -10,6 +10,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.king.myapplication.R;
 import com.king.myapplication.data.Bean.ShowBean;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -25,7 +26,9 @@ public class PopulaAdapter extends BaseQuickAdapter<ShowBean.ResultBean, BaseVie
     @Override
     protected void convert(BaseViewHolder helper, ShowBean.ResultBean item) {
         helper.setText(R.id.tv_text1, item.getName());
-        helper.setText(R.id.tv_text2, item.getReleaseTime() + "");
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        String format1 = format.format(item.getReleaseTime());
+        helper.setText(R.id.tv_text2, format1);
         helper.setText(R.id.tv_text3, item.getWantSeeNum() + "");
         ImageView view = helper.getView(R.id.jjsy_imager);
         Glide.with(mContext).load(item.getImageUrl()).into(view);

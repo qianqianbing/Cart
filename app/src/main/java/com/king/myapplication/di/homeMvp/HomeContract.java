@@ -1,5 +1,6 @@
 package com.king.myapplication.di.homeMvp;
 
+import com.king.myapplication.data.Bean.BannerBean;
 import com.king.myapplication.data.Bean.ShowBean;
 
 /**
@@ -10,6 +11,7 @@ import com.king.myapplication.data.Bean.ShowBean;
 public interface HomeContract {
     public interface IHomeView {
         public void ShowhomeData(ShowBean showBean);
+        public void BannerData(BannerBean bannerBean);
     }
 
     public interface IhomePresenter {
@@ -23,6 +25,11 @@ public interface HomeContract {
 
         public interface HomeBack {
             void getHomeData(ShowBean showBean);
+        }
+        public void RequestbannerData(BannerBack bannerBack);
+
+        public interface BannerBack {
+            void getBannerData(BannerBean bannerBean);
         }
     }
 }

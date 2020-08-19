@@ -1,5 +1,6 @@
 package com.king.myapplication.data.util;
 
+import com.king.myapplication.data.Bean.BannerBean;
 import com.king.myapplication.data.Bean.ShowBean;
 
 import io.reactivex.Observable;
@@ -30,8 +31,8 @@ public interface ApiService {
     @GET("movieApi/movie/v2/findComingSoonMovieList")
     Observable<ShowBean> obtainReleased(@Query("page") String page, @Query("count") String count);
 //
-//    @GET("movieApi/tool/v2/banner")
-//    Observable<BannerBean> obtianBanner();
+    @GET("movieApi/tool/v2/banner")
+    Observable<BannerBean> obtianBanner();
 //
 //    @GET("movieApi/movie/v2/findReleaseMovieList")
 //    Observable<ReleaseBean> obtainRelease(@Query("page") String page, @Query("count") String count);

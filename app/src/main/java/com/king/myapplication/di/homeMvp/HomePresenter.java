@@ -1,5 +1,6 @@
 package com.king.myapplication.di.homeMvp;
 
+import com.king.myapplication.data.Bean.BannerBean;
 import com.king.myapplication.data.Bean.ShowBean;
 import com.king.myapplication.ui.base.BasePresenter;
 
@@ -23,6 +24,13 @@ public class HomePresenter<V extends HomeContract.IHomeView> extends BasePresent
                 getView().ShowhomeData(showBean);
             }
         });
-
+    }
+    public void requestBannerData() {
+       homeModel.RequestbannerData(new HomeContract.IHomeModel.BannerBack() {
+           @Override
+           public void getBannerData(BannerBean bannerBean) {
+               getView().BannerData(bannerBean);
+           }
+       });
     }
 }
